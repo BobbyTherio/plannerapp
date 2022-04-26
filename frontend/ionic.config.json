@@ -1,0 +1,7 @@
+{
+  "name": "plannerapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

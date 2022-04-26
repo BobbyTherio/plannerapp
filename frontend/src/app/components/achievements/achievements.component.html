@@ -1,0 +1,27 @@
+
+<ion-card *ngIf="task.status === 'completed'">
+  <ion-card-content>
+    <h1 style="color:white">{{ task.name }} </h1> <hr>
+    <p> Starts : {{ task.date_of_start | date }} </p>
+    <p> Ends : {{ task.date_of_end | date }} </p>
+    <h3 style="color:rgb(6, 184, 0)">Status : {{ task.status }} </h3> <hr>
+    <h2 style="color:rgb(255, 255, 255)"> Description : {{ task.description }} </h2> <hr>
+
+    <div><ion-button (ionChange)="resetClick()" size="small" color="danger" fill="clear">
+      <ion-icon name="reload-outline"></ion-icon> Reset button </ion-button></div>
+  </ion-card-content>
+</ion-card>
+
+<ion-card *ngIf="goal.status === 'completed'">
+  <ion-card-content>
+    <h1 style="color:white">{{ goal.name }} </h1> <hr>
+    <p> Starts : {{ goal.date_of_start | date }} </p>
+    <p> Ends : {{ goal.date_of_end | date }} </p>
+    <h3 style="color:rgb(212, 216, 5)"> Status : {{ goal.status }} </h3> <hr>
+    <h2 style="color:rgb(255, 255, 255)"> Description : {{ goal.description }} </h2> <hr>
+
+    <div><ion-button (ionChange)="resetClick()" size="small" color="danger" fill="clear">
+      <ion-icon name="reload-outline"></ion-icon> Reset button </ion-button></div>
+  </ion-card-content>
+</ion-card>
+

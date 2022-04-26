@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Achivements
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+<div *ngFor="let g of goals">
+  <app-achievements [goal]="g"></app-achievements>
+</div>
+
+<div *ngFor="let t of tasks">
+  <app-achievements [task]="t"></app-achievements>
+</div>
+
+<!-- <div *ngFor="let t of tasks">
+    <app-task [task]="t"></app-task>
+  </div> -->
+
+<!--   <div *ngFor="let g of goals">
+    <app-goal [goal]="g"></app-goal>
+  </div> -->
+
+</ion-content>

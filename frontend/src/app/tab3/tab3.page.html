@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Notes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div *ngFor="let n of notes">
+    <app-note [note]="n"></app-note>
+  </div>
+    
+  <ion-button color="dark" (click)="addNote()"><ion-icon name="add"></ion-icon>Add Task</ion-button>
+
+</ion-content>

@@ -1,0 +1,11 @@
+<ion-card *ngIf="goal.status === 'pending' || goal.status === 'started'">
+  <ion-card-content>
+    <h1 style="color:white">{{ goal.name }} </h1> <hr>
+    <p> Starts : {{ goal.date_of_start | date }} </p>
+    <p> Ends : {{ goal.date_of_end | date }} </p>
+    <h3 style="color:rgb(212, 216, 5)"> Status : {{ goal.status }} </h3> <hr>
+    <h2 style="color:rgb(255, 255, 255)"> Description : {{ goal.description }} </h2> <hr>
+
+    <div><ion-checkbox (ionChange)="checkboxClickGoal()" slot="start" color="success"></ion-checkbox> Mark as completed</div>
+  </ion-card-content>
+</ion-card>

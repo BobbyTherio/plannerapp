@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Create New Goal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form [formGroup]="addGoal">
+    <ion-item>
+      <ion-label position="fixed">Goal Name</ion-label>
+      <ion-input formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Description</ion-label>
+      <ion-textarea formControlName="description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Task Start</ion-label>
+      <ion-input type="datetime-local" formControlName="date_of_start"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Task End</ion-label>
+      <ion-input type="datetime-local" formControlName="date_of_end"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Status</ion-label>
+      <ion-select formControlName="status">
+        <ion-select-option value="pending">Pending</ion-select-option>
+        <ion-select-option value="started">Started</ion-select-option>
+        <ion-select-option value="completed">Completed</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button expand="full" (click)="add_goal()" [disabled]="addGoal.invalid">Done</ion-button>
+  </form>
+  <ion-button expand="full" class="back_button" (click)="return()">Back</ion-button>
+</ion-content>
